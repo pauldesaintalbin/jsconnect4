@@ -1,0 +1,51 @@
+#plateau {
+    border-radius: 30px;
+    padding: 30px;
+    background: #E7C5C5;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    gap: 20px;
+}
+
+.col {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.emplacement {
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 345345px;
+    position: relative;
+}
+
+.jeton {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 345345px;
+    animation: apparition-jeton .3s ease-in-out;
+}
+
+.jeton.rouge{
+    background: #FF5656;
+}
+
+.jeton.jaune {
+    background: #FFFA80;
+}
+
+@keyframes apparition-jeton {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
